@@ -13,6 +13,7 @@
     <body>
 
         <div id="app" class="container">
+
             <div class="items">
 
                 <div class="item">
@@ -24,17 +25,19 @@
                 </div> 
                 
             </div>
+
             <div class="thumbs">
                 
                 <div class="prev" @click="prev()"></div>
                 <div class="next" @click="next()"></div>
 
-                <div v-for="(item, index) in items" :class="index==active?'active':''" class="thumb">
+                <div v-for="(item, index) in items" :class="index==active?'active':''" class="thumb" @click="clickThumb(index)">
                     <img :src="item.url" alt="">
                 </div> 
                 
               
             </div>
+
        </div>
         
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

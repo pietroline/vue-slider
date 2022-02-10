@@ -50,7 +50,11 @@ const vue = new Vue (
                 }else{
                     this.active++;
                 }
+            },
 
+            clickThumb(indice){
+                //gestisce click sulle thumb
+                this.active = indice;
             }
         }
     }
