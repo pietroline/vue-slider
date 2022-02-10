@@ -3,7 +3,7 @@
 const vue = new Vue (
 
     {
-        el: "#app",
+        el: "#app",        
         data: {
             items: [
                 {
@@ -36,6 +36,11 @@ const vue = new Vue (
             timer: "",
         
         },
+
+        mounted:function(){
+            this.autoplay();
+        },
+        
         methods:{
             prev(){
                 if(this.active == 0){
