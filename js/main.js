@@ -3,7 +3,7 @@
 const vue = new Vue (
 
     {
-        el: "app",
+        el: "#app",
         data: {
             items: [
                 {
@@ -36,7 +36,22 @@ const vue = new Vue (
         
         },
         methods:{
+            prev(){
+                if(this.active == 0){
+                    this.active = this.items.length -1;
+                }else{
+                    this.active--;
+                }
+            },
 
+            next(){
+                if(this.active == this.items.length -1){
+                    this.active = 0;
+                }else{
+                    this.active++;
+                }
+
+            }
         }
     }
 
