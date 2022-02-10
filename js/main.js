@@ -33,6 +33,7 @@ const vue = new Vue (
                 }
             ],
             active: 0,
+            timer: "",
         
         },
         methods:{
@@ -55,6 +56,16 @@ const vue = new Vue (
             clickThumb(indice){
                 //gestisce click sulle thumb
                 this.active = indice;
+            },
+
+            autoplay(){
+                //gestisce autoplay nello slider, ogni 3 secondi cambia immagine automaticamente
+                this.timer = setInterval(() => this.next(), 1000);
+            },
+
+            stopAutoplay(){
+                //fermo autoplay, viene invocata quando sono in hover su uno slider
+                clearInterval(this.timer);
             }
         }
     }
