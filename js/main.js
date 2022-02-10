@@ -37,10 +37,10 @@ const vue = new Vue (
         
         },
 
-        mounted:function(){
+        mounted: function(){
             this.autoplay();
         },
-        
+
         methods:{
             prev(){
                 if(this.active == 0){
@@ -49,7 +49,7 @@ const vue = new Vue (
                     this.active--;
                 }
             },
-
+ 
             next(){
                 if(this.active == this.items.length -1){
                     this.active = 0;
