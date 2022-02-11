@@ -65,7 +65,7 @@ const vue = new Vue (
 
             autoplay(){
                 //gestisce autoplay nello slider, ogni 3 secondi cambia immagine automaticamente
-                this.timer = setInterval(() => this.next(), 1000);
+                this.timer = setInterval(() => this.next(), 3000);
             },
 
             stopAutoplay(){
